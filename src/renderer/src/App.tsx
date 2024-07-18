@@ -1,8 +1,12 @@
 import Versions from './components/Versions'
 import electronLogo from './assets/electron.svg'
+import UpdateElectron from './components/update/update'
 
 function App(): JSX.Element {
-  const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
+  const ipcHandle = (): void => {
+    window.electron.ipcRenderer.send('ping')
+    console.log('ping')
+  }
 
   return (
     <>
@@ -28,6 +32,7 @@ function App(): JSX.Element {
         </div>
       </div>
       <Versions></Versions>
+      <UpdateElectron />
     </>
   )
 }
