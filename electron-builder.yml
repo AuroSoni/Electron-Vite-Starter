@@ -13,6 +13,8 @@ asarUnpack:
   - resources/**
 win:
   executableName: electron-starter
+  publisherName: "DevCertAuro"
+  verifyUpdateCodeSignature: false
   
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
