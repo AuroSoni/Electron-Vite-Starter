@@ -13,6 +13,7 @@ asarUnpack:
   - resources/**
 win:
   executableName: electron-starter
+  
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -39,5 +40,6 @@ appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false
 publish:
-  provider: generic
-  url: https://example.com/auto-updates
+  provider: github
+  owner: AuroSoni
+  repo: Electron-Vite-Starter-Releases
